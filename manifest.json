@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "No-Curse AI",
+    "version": "1.0",
+    "description": "Prevents users from posting curse words using AI.",
+    "permissions": ["scripting", "storage", "activeTab", "background"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "No_Curse.html"
+    }
+  }
+  
